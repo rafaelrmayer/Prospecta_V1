@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123568">
+  <meta name="description" content="Prospecta — organize sua prospecção comercial por segmento e região.">
+  <title>Prospecta — Inteligência Comercial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Prospecta página inicial">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="11" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="currentColor"/><path d="M24 24 39 9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        </span>
+        <span><strong>Prospecta</strong><small>INTELIGÊNCIA COMERCIAL</small></span>
+      </a>
+      <div class="nav-label">ESPAÇO DE TRABALHO</div>
+      <nav class="nav">
+        <a class="nav-item active" href="#buscar"><span class="nav-icon">⌕</span> Buscar empresas</a>
+        <a class="nav-item" href="#resultados"><span class="nav-icon">▤</span> Minhas listas <span class="nav-count" id="savedCount">0</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note">
+          <span class="note-icon">✦</span>
+          <strong>Encontre oportunidades.</strong>
+          <p>Organize suas pesquisas e prepare seus próximos contatos comerciais.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar">P</div>
+          <div><strong>Área de demonstração</strong><small>Protótipo V1</small></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumbs">Workspace <span>/</span> <strong>Buscar empresas</strong></div>
+        <span class="demo-pill"><span></span> MODO DEMONSTRAÇÃO</span>
+      </header>
+
+      <section class="content">
+        <div class="welcome">
+          <div>
+            <div class="eyebrow">PROSPECÇÃO COMERCIAL LOCAL</div>
+            <h1>Novos mercados começam<br class="desktop-break"> com boas descobertas.</h1>
+            <p>Encontre empresas por segmento e região e organize suas oportunidades comerciais em um só lugar.</p>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="orbit-center"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M24 24 39 9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+          </div>
+        </div>
+
+        <section class="search-panel panel" id="buscar">
+          <div class="section-heading">
+            <div class="heading-icon">⌕</div>
+            <div><h2>Encontre empresas</h2><p>Defina os critérios para organizar sua pesquisa.</p></div>
+          </div>
+          <form id="searchForm" class="search-form">
+            <label class="field field-segment">
+              <span>Segmento ou atividade</span>
+              <div class="input-wrap"><span class="input-icon">▦</span><input id="segment" type="text" placeholder="Ex.: restaurantes, clínicas, oficinas"></div>
+            </label>
+            <label class="field">
+              <span>Cidade</span>
+              <div class="input-wrap"><span class="input-icon">⌖</span><input id="city" type="text" placeholder="Ex.: Curitiba"></div>
+            </label>
+            <label class="field field-state">
+              <span>Estado</span>
+              <select id="state"><option value="">Todos</option><option>PR</option><option>SC</option><option>SP</option><option>RS</option><option>RJ</option><option>MG</option><option>DF</option></select>
+            </label>
+            <button class="button button-primary search-button" type="submit"><span>⌕</span> Pesquisar</button>
+          </form>
+          <div class="search-foot"><span class="info-dot">i</span> Esta versão utiliza dados fictícios para demonstrar a experiência. Ainda não consulta empresas reais.</div>
+        </section>
+
+        <section class="results-section" id="resultados">
+          <div class="results-header">
+            <div><div class="eyebrow">SUA PESQUISA</div><h2>Empresas encontradas <span class="result-number" id="resultCount">6</span></h2><p id="resultSubtitle">Exemplos fictícios para explorar a interface.</p></div>
+            <div class="result-actions">
+              <button class="button button-secondary" id="saveList">♡ <span>Salvar lista</span></button>
+              <button class="button button-primary" id="exportCsv">↓ <span>Exportar CSV</span></button>
+            </div>
+          </div>
+          <div class="filter-row">
+            <div class="filter-search"><span>⌕</span><input id="quickFilter" type="search" placeholder="Filtrar resultados..." aria-label="Filtrar resultados"></div>
+            <label class="select-filter"><span>Segmento</span><select id="categoryFilter"><option value="">Todos</option></select></label>
+            <label class="select-filter"><span>Estado</span><select id="stateFilter"><option value="">Todos</option></select></label>
+            <button class="clear-filters" id="clearFilters">Limpar filtros</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th><input id="selectAll" type="checkbox" aria-label="Selecionar todas as empresas"></th><th>EMPRESA</th><th>SEGMENTO</th><th>LOCALIZAÇÃO</th><th>CONTATO DEMONSTRATIVO</th><th></th></tr></thead>
+              <tbody id="companyRows"></tbody>
+            </table>
+            <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><strong>Nenhuma empresa encontrada</strong><p>Tente ajustar os filtros ou os critérios da pesquisa.</p></div>
+          </div>
+          <div class="table-footer"><span id="showingText">Mostrando 6 empresas demonstrativas</span><span>Os dados exibidos são fictícios.</span></div>
+        </section>
+
+        <footer class="footer"><span>© 2026 Prospecta</span><span>Protótipo V1 · Feito para organizar oportunidades</span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
