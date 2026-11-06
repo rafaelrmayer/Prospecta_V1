@@ -1,5 +1,7 @@
 # Prospecta — V1 (protótipo)
 
+Protótipo de plataforma de prospecção comercial local, desenvolvido por **[Rafael Ricardo Mayer](https://github.com/rafaelrmayer)** para explorar a pesquisa e a organização de oportunidades para pequenos negócios e profissionais autônomos. Esta V1 demonstra a interface com dados fictícios.
+
 Interface inicial para uma plataforma de prospecção comercial local, com identidade visual azul e branco.
 
 ## O que funciona nesta versão
@@ -40,3 +42,15 @@ prospecta/
 
 ## Licenciamento e fontes
 Antes de conectar provedores de dados, confira os termos atuais da API ou fonte, especialmente regras de atribuição, armazenamento e redistribuição.
+
+## Autoria
+
+Desenvolvido por **[Rafael Ricardo Mayer](https://github.com/rafaelrmayer)**, desenvolvedor e pesquisador independente com foco em inteligência artificial, tecnologia assistiva, acessibilidade e soluções digitais.
+
+Conheça o [perfil e portfólio de projetos de Rafael Ricardo Mayer](https://github.com/rafaelrmayer).
+
+## Outros projetos de Rafael Ricardo Mayer
+
+- **[Jornada de Bia](https://github.com/rafaelrmayer/jornada-de-Bia_Sakura_V.1.5)**: Comunicação aumentativa e alternativa (CAA) e tecnologia assistiva.
+- **[Rede Girassol API](https://github.com/rafaelrmayer/Rede_Girassol_API_V_1)**: Organização de dados públicos de saúde.
+- **[INK Bia Cerisier](https://github.com/rafaelrmayer/ink-bia-cerisier)**: Projeto de plataforma de gestão para tatuadores e estúdios.
